@@ -1,0 +1,33 @@
+body
+{
+    background-color: rgb(52, 53, 65);
+}
+.indexPage 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border : 1px solid #3f4167;
+    height: 85vh;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexPage button
+{
+    width:25%;
+    height: 40px;
+    border:none;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.btns
+{
+   color:white; 
+   text-decoration: none; 
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bold;
+   font-size: medium;
+}
