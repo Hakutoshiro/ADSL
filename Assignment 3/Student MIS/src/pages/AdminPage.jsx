@@ -8,9 +8,7 @@ export default function AdminPage() {
     const [showTable, setShowTable] = useState('')
     const [dbData,setDBData] = useState(null)
     const handleBtnClick = async (dbName) => {
-        const { data } = await axios.post('/readData', {
-            dbName: dbName
-        })
+        const {data} = await axios.get(`/readData/${dbName}`)
         setDBData(data);
         setShowTable(dbName)
     }

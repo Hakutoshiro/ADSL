@@ -12,9 +12,7 @@ export default function TeacherPage() {
     // const [info, setInfo] = useState([])
     // const { user } = useContext(LoginContext)
     const handleBtnClick = async (dbName) => {
-        const { data } = await axios.post('/readData', {
-            dbName: dbName
-        })
+        const {data} = await axios.get(`/readData/${dbName}`)
         setDBData(data);
         setShowTable(!showTable);
     }

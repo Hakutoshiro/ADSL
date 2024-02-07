@@ -11,9 +11,7 @@ export default function TeacherTable({ data }) {
         setShowForm(!showForm)
     }
     const handleRefreshBtn = async () => {
-        const response = await axios.post('/readData',{
-            dbName:'Teacher'
-        })
+        const response = await axios.get('/readData/Teacher')
         setDataDB(response.data)
     }
     return (

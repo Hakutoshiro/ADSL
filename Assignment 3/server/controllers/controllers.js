@@ -9,7 +9,7 @@ const handleLogin = async (req,res) => {
 }
 
 const handleReadData = async (req,res) => {
-    const {dbName} =req.body;
+    const {dbName} =req.params;
     await con.query(`select * from ${dbName}`,function (err,result){
         if(err)res.json(null)
         else res.json(result);

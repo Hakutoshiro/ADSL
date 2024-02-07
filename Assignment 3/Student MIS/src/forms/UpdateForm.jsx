@@ -75,6 +75,7 @@ export default function UpdateForm({ data, role }) {
                 onRequestClose={closeModal}
                 style={customStyles}
                 contentLabel="Example Modal"
+                ariaHideApp={false} 
             >
                 <form className="mt-3 mx-10 text-center mb-32" onSubmit={(ev) => handleUpdateBtn(ev)}>
                     <h1 className="text-4xl">Update</h1>
