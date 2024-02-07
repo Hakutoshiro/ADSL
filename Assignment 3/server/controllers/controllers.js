@@ -32,4 +32,13 @@ const handleUpdateData =async (req,res) =>{
     })
 }
 
-module.exports ={handleLogin,handleReadData,handleEnrollData,handleUpdateData}
+const handleDeleteData =async (req,res) =>{
+    id=req.query.id;
+    role=req.query.role;
+    await con.query(`delete from ${role} where ${role==='Student'?'student_id':'teacher_id'}=${id}`,function(err,result){
+        if(err) res.json(null)
+        else res.json("success")
+    })
+}
+
+module.exports ={handleLogin,handleReadData,handleEnrollData,handleUpdateData,handleDeleteData}

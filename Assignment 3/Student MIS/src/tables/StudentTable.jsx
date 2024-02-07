@@ -2,6 +2,7 @@ import { useState } from "react"
 import EnrollForm from "../forms/EnrollForm"
 import axios from "axios"
 import UpdateForm from "../forms/UpdateForm"
+import ConfirmationForm from "../forms/ConfirmationForm"
 
 export default function StudentTable({ data }) {
     const [showForm, setShowForm] = useState(false)
@@ -42,7 +43,7 @@ export default function StudentTable({ data }) {
                             <td>{element.email}</td>
                             <td className="flex justify-center">
                                 <UpdateForm data={element} role={'Student'} />
-                                <button className="bg-gray-200 px-4 mx-2 my-1 py-1 rounded-lg">Delete</button>
+                                <ConfirmationForm data = {element} role = {'Student'}/>
                             </td>
                         </tr>
                     })}

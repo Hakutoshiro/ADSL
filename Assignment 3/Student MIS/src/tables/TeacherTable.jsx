@@ -1,6 +1,7 @@
 import { useState } from "react"
 import UpdateForm from "../forms/UpdateForm"
 import EnrollForm from "../forms/EnrollForm"
+import ConfirmationForm from "../forms/ConfirmationForm"
 import axios from "axios"
 
 
@@ -43,7 +44,7 @@ export default function TeacherTable({ data }) {
                             <td>{element.email}</td>
                             <td className="flex justify-center">
                                 <UpdateForm data = {element} role = {'Teacher'}/>
-                                <button className="bg-gray-200 px-4 mx-2 my-1 py-1 rounded-lg">Delete</button>
+                                <ConfirmationForm data = {element} role = {'Teacher'}/>
                             </td>
                         </tr>
                     })}
