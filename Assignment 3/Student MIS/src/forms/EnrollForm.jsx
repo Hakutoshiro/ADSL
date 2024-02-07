@@ -39,9 +39,9 @@ export default function EnrollForm({role}){
     }
 
     return (
-        <form  className="mb-32" onSubmit={(ev)=>handleSubmitBtn(ev)}>
-            <h1 className="text-4xl">Enroll</h1>
-            <div className="mt-8 max-w-96 mx-auto  w-max h-52 py-2 ">
+        <form  className="mb-32 text-center" onSubmit={(ev)=>handleSubmitBtn(ev)}>
+            <h1 className="text-4xl mt-2">Enroll</h1>
+            <div className="mt-4 max-w-96 mx-auto  w-max h-52 py-2 ">
                 <input type="text" placeholder={`Enter ${role} ID`}
                     value={id} onChange={ev => setId(ev.target.value)}
                     className="h-8 my-2 px-4 rounded-lg w-full border-2 border-black"

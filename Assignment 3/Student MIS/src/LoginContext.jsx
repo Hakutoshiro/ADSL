@@ -3,9 +3,9 @@ export const LoginContext = createContext();
 
 export function LoginContextProvider({children}){
     const [ready , setReady] = useState(false)
-    const [user,setUser] = useState({})
+    // const [user,setUser] = useState({})
     return(
-        <LoginContext.Provider value={{ready,setReady,user,setUser}}>
+        <LoginContext.Provider value={{ready,setReady}}>
             {children}
         </LoginContext.Provider>
     )
