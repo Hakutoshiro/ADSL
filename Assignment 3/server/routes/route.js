@@ -6,6 +6,6 @@ const router = express.Router();
 router.post('/login',handleLogin)
 router.get('/readData/:dbName?',handleReadData)
 router.post('/enroll',handleEnrollData)
-router.post('/update',handleUpdateData)
+router.patch('/update',handleUpdateData)
 
 module.exports = router;

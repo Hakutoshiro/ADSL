@@ -31,7 +31,7 @@ export default function UpdateForm({ data, role }) {
             return
         }
         try {
-            const  response = await axios.post(`/update`,{
+            const  response = await axios.patch(`/update`,{
                 id: role === 'Student'? data.student_id : data.teacher_id,
                 name,
                 email,
