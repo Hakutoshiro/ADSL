@@ -32,6 +32,14 @@ const handleUpdateData =async (req,res) =>{
     })
 }
 
+const handleLoginInfo = async (req, res) => {
+    const {id,role} = req.query;
+    await con.query(`select * from ${role} where ${role}_id=${id}`,function(err,result){
+        if(err) res.json(null)
+        else res.json(result)
+    })
+}
+
 const handleDeleteData =async (req,res) =>{
     id=req.query.id;
     role=req.query.role;
@@ -41,4 +49,4 @@ const handleDeleteData =async (req,res) =>{
     })
 }
 
-module.exports ={handleLogin,handleReadData,handleEnrollData,handleUpdateData,handleDeleteData}
+module.exports ={handleLogin,handleReadData,handleEnrollData,handleUpdateData,handleDeleteData,handleLoginInfo}

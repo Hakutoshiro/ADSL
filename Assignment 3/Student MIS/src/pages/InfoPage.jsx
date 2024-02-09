@@ -1,5 +1,4 @@
 export default function InfoPage({ info, role }) {
-    if (info) console.log(info)
     return (
         <>
             {info && (

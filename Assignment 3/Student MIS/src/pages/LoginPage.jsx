@@ -4,7 +4,7 @@ import axios from 'axios'
 import { LoginContext } from "../LoginContext"
 
 export default function LoginPage() {
-    const {setReady} = useContext(LoginContext)
+    const {setReady,setUser} = useContext(LoginContext)
     const { role } = useParams()
     const [id, setId] = useState('')
     const [password, setPassword] = useState('')
@@ -20,7 +20,7 @@ export default function LoginPage() {
             if (data) {  
                 alert('Login Success')
                 setReady(true)
-                // setUser({id,role})
+                setUser({id,role})
                 setRender(role)
             }else{
                 alert('Login Failed-Incorrect ID or Password')
